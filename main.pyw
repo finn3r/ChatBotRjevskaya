@@ -272,7 +272,7 @@ def main():
 								send_message(user_id = user_id, text = AllText[4], attachment = '', keyboard = keyboard(6))
 							else:
 								send_message(user_id = user_id, text = AllText[4], attachment = '', keyboard = keyboard(3))
-						elif ((response == '5') or (response.find('время')!=(-1)) or (response.find('где')!=(-1))):
+						elif ((response == '5') or (response.find('время')!=(-1)) or (response.find('адрес')!=(-1))):
 							if(user_id in admin_id):
 								send_message(user_id = user_id, text = AllText[5], attachment = add_photo('map.jpg'), keyboard = keyboard(6))
 							else:
