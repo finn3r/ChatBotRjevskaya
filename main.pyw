@@ -93,7 +93,7 @@ def keyboard(type):
 		keyboard.add_openlink_button(label = 'Полезные статьи', link = 'https://vk.com/@rzhevka_lib')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 6013442, owner_id = -17047312, hash = 'form_id=1', label = 'Организация события')
-		keyboard.add_button(label = 'Где мы и время работы', color = 'secondary')
+		keyboard.add_button(label = 'Адрес и время работы', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 5575136, owner_id = -17047312, hash = '',label = 'Афиша')
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
@@ -106,7 +106,7 @@ def keyboard(type):
 		keyboard.add_openlink_button(label = 'Полезные статьи', link = 'https://vk.com/@rzhevka_lib')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 6013442, owner_id = -17047312, hash = 'form_id=1', label = 'Организация события')
-		keyboard.add_button(label = 'Где мы и время работы', color = 'secondary')
+		keyboard.add_button(label = 'Адрес и время работы', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 5575136, owner_id = -17047312, hash = '',label = 'Афиша')
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
@@ -124,7 +124,7 @@ def keyboard(type):
 		keyboard.add_openlink_button(label = 'Полезные статьи', link = 'https://vk.com/@rzhevka_lib')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 6013442, owner_id = -17047312, hash = 'form_id=1', label = 'Организация события')
-		keyboard.add_button(label = 'Где мы и время работы', color = 'secondary')
+		keyboard.add_button(label = 'Адрес и время работы', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 5575136, owner_id = -17047312, hash = '',label = 'Афиша')
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
@@ -137,7 +137,7 @@ def keyboard(type):
 		keyboard.add_openlink_button(label = 'Полезные статьи', link = 'https://vk.com/@rzhevka_lib')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 6013442, owner_id = -17047312, hash = 'form_id=1', label = 'Организация события')
-		keyboard.add_button(label = 'Где мы и время работы', color = 'secondary')
+		keyboard.add_button(label = 'Адрес и время работы', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 5575136, owner_id = -17047312, hash = '',label = 'Афиша')
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
@@ -188,7 +188,7 @@ def main():
 					except Exception as error:
 						print(error)
 					if (event.from_user):
-						if last_message_from_bot =='':
+						if (last_message_from_bot ==''):
 							send_message(user_id = user_id, text = "Добро пожаловать в нашу группу!", attachment = '', keyboard = '')
 							send_message(user_id = user_id, text = 'Я чат-бот библиотеки "Ржевская". Меня создали для помощи специально вам, ' + (get_user_name(event.obj.message['from_id'])) + '. Вот, что я могу:', attachment = '', keyboard = '')
 							if(user_id in admin_id):
@@ -230,8 +230,8 @@ def main():
 									send_message(user_id = user_id, text = 'Введен неверный адрес электронной почты, повторите ввод.', attachment = '', keyboard = '')
 									send_message(user_id = user_id, text = AllText[6], attachment = '', keyboard = keyboard(2))
 						elif ((response.find('измен')!=(-1)) and (user_id in admin_id)):
-							send_message(user_id = user_id, text = "Введите номер сообщения для его изменения:\n1 - Аренда коворкинга\n2 - Организация события\n3 - Афиша\n4 - Полезные статьи\n5 - Где мы и время работы\n6 - Продлить книгу\n7 - Контакты", attachment = '', keyboard = '')
-						elif ((last_message_from_bot =="Введите номер сообщения для его изменения:\n1 - Аренда коворкинга\n2 - Организация события\n3 - Афиша\n4 - Полезные статьи\n5 - Где мы и время работы\n6 - Продлить книгу\n7 - Контакты") and (user_id in admin_id)):
+							send_message(user_id = user_id, text = "Введите номер сообщения для его изменения:\n1 - Аренда коворкинга\n2 - Организация события\n3 - Афиша\n4 - Полезные статьи\n5 - Адрес и время работы\n6 - Продлить книгу\n7 - Контакты", attachment = '', keyboard = '')
+						elif ((last_message_from_bot =="Введите номер сообщения для его изменения:\n1 - Аренда коворкинга\n2 - Организация события\n3 - Афиша\n4 - Полезные статьи\n5 - Адрес и время работы\n6 - Продлить книгу\n7 - Контакты") and (user_id in admin_id)):
 							if((response.isdigit()) and (check_change_message(response))):
 								send_message(user_id = user_id, text = "Вывожу прежнее сообщение по номеру " + response + "\n\n" + AllText[int(response)] + "\n\nНапишите сообщение для замены. Если вы не хотите производить замену напишите\n Отмена", attachment = '', keyboard = '')
 							else:
