@@ -1,3 +1,3 @@
 @echo off
 git checkout master
-git pull origin master
+git reset --hard origin/master
