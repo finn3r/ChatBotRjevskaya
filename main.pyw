@@ -96,8 +96,9 @@ def keyboard(type):
 		keyboard.add_button(label = 'Адрес и время работы', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 5575136, owner_id = -17047312, hash = '',label = 'Афиша')
-		keyboard.add_button(label = 'Контакты', color = 'secondary')
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
+		keyboard.add_line()
+		keyboard.add_button(label = 'Контакты', color = 'secondary')
 	elif(type == 2):
 		keyboard = VkKeyboard(one_time = False, inline = False)
 		keyboard.add_button(label = 'Назад в меню', color = 'negative')
@@ -110,9 +111,9 @@ def keyboard(type):
 		keyboard.add_button(label = 'Адрес и время работы', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 5575136, owner_id = -17047312, hash = '',label = 'Афиша')
-		keyboard.add_button(label = 'Контакты', color = 'secondary')
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
 		keyboard.add_line()
+		keyboard.add_button(label = 'Контакты', color = 'secondary')
 		keyboard.add_button(label = 'Вывести меню', color = 'positive')
 	elif(type == 4):
 		keyboard = VkKeyboard(one_time = True, inline = False)
@@ -129,9 +130,9 @@ def keyboard(type):
 		keyboard.add_button(label = 'Адрес и время работы', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_vkapps_button(app_id = 5575136, owner_id = -17047312, hash = '',label = 'Афиша')
-		keyboard.add_button(label = 'Контакты', color = 'secondary')
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
 		keyboard.add_line()
+		keyboard.add_button(label = 'Контакты', color = 'secondary')
 		keyboard.add_button(label = 'Изменить текст сообщений', color = 'negative')
 	elif(type == 6):
 		keyboard = VkKeyboard(one_time = False, inline = False)
@@ -145,6 +146,7 @@ def keyboard(type):
 		keyboard.add_button(label = 'Продлить книгу', color = 'secondary')
 		keyboard.add_line()
 		keyboard.add_button(label = 'Вывести меню', color = 'positive')
+		keyboard.add_button(label = 'Контакты', color = 'secondary')
 		keyboard.add_button(label = 'Изменить текст сообщений', color = 'negative')
 	return keyboard
 
