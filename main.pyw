@@ -219,7 +219,7 @@ def main():
 								if(format(response, 'email')):
 									mail = response
 									ticket_number = search_ticket(user_id)
-									ticket_text = 'Запрос на продление книги от ' + '@id' + str(user_id) + ' (' +str((get_user_name(event.obj.message['from_id']))) + '):\nНомер билета: ' + str(ticket_number) + '\nАдресс эл. почты: ' + str(mail)
+									ticket_text = 'Запрос на продление книги от ' + '@id' + str(user_id) + ' (' +str((get_user_name(event.obj.message['from_id']))) + '):\nНомер билета: ' + str(ticket_number) + '\nАдрес эл. почты: ' + str(mail)
 									message_for_admins(ticket_text)
 									send_message(user_id = user_id, text = 'Ваша заявка была принята, ответ будет отправлен на почту. Возвращаю вас в главное меню.', attachment = '', keyboard = '')
 									if(user_id in admin_id):
